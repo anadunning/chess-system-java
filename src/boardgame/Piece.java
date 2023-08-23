@@ -10,7 +10,7 @@ public class Piece {
 		position = null;
 	}
 
-	protected Board getBoard() {
+	protected Board getBoard() {	// Protected as we want it to be accessed and used by the boardgame package only.
 		return board;
 	}
 }
