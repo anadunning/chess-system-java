@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 import boardgame.Board;
 import boardgame.Piece;
 import boardgame.Position;
+import chess.pieces.Bishop;
 import chess.pieces.King;
 import chess.pieces.Pawn;
 import chess.pieces.Rook;
@@ -185,8 +186,6 @@ public class ChessMatch {
 			
 		}
 		return true;
-		
-		
 	}
 	
 	private void placeNewPiece(char column, int row, ChessPiece piece) {
@@ -196,7 +195,9 @@ public class ChessMatch {
 	
 	private void initialSetup() {
 		placeNewPiece('a', 1, new Rook(board, Colour.WHITE));
+		placeNewPiece('c', 1, new Bishop(board, Colour.WHITE));
         placeNewPiece('e', 1, new King(board, Colour.WHITE));
+        placeNewPiece('f', 1, new Bishop(board, Colour.WHITE));
         placeNewPiece('h', 1, new Rook(board, Colour.WHITE));
         placeNewPiece('a', 2, new Pawn(board, Colour.WHITE));
         placeNewPiece('b', 2, new Pawn(board, Colour.WHITE));
@@ -208,7 +209,9 @@ public class ChessMatch {
         placeNewPiece('h', 2, new Pawn(board, Colour.WHITE));
         
         placeNewPiece('a', 8, new Rook(board, Colour.BLACK));
+        placeNewPiece('c', 8, new Bishop(board, Colour.BLACK));
         placeNewPiece('e', 8, new King(board, Colour.BLACK));
+        placeNewPiece('f', 8, new Bishop(board, Colour.BLACK));
         placeNewPiece('h', 8, new Rook(board, Colour.BLACK));
         placeNewPiece('a', 7, new Pawn(board, Colour.BLACK));
         placeNewPiece('b', 7, new Pawn(board, Colour.BLACK));
